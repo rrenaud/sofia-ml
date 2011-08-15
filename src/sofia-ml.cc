@@ -164,7 +164,11 @@ void LoadModelFromFile(const string& file_name, SfWeightVector** w) {
   model_stream.close();
   std::cerr << "   Done." << std::endl;
 
-  *w = new SfWeightVector(model_string);
+  if (CMD_LINE_INTS["--hash_mask_bits"] == 0) {
+    *w = new SfWeightVector(model_string);
+  } else {
+    *w = new SfHashWeightVector(CMD_LINE_INTS["--hash_mask_bits"], model_string);
+  }
   assert(*w != NULL);
 }
 
