@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/31/trunk/sofia-ml/src
+END
+simple-cmd-line-helper_test.cc
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/2/trunk/sofia-ml/src/simple-cmd-line-helper_test.cc
+END
+sf-weight-vector_test.cc
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/14/trunk/sofia-ml/src/sf-weight-vector_test.cc
+END
+sf-weight-vector.cc
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/14/trunk/sofia-ml/src/sf-weight-vector.cc
+END
+simple-cmd-line-helper.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/8/trunk/sofia-ml/src/simple-cmd-line-helper.h
+END
+sf-weight-vector.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/14/trunk/sofia-ml/src/sf-weight-vector.h
+END
+sf-sparse-vector_test.cc
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/12/trunk/sofia-ml/src/sf-sparse-vector_test.cc
+END
+sf-sparse-vector.cc
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/15/trunk/sofia-ml/src/sf-sparse-vector.cc
+END
+sf-hash-inline_test.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2/trunk/sofia-ml/src/sf-hash-inline_test.cc
+END
+sf-hash-inline.cc
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/11/trunk/sofia-ml/src/sf-hash-inline.cc
+END
+sf-sparse-vector.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/17/trunk/sofia-ml/src/sf-sparse-vector.h
+END
+sf-hash-inline.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/sofia-ml/src/sf-hash-inline.h
+END
+sf-data-set_test.cc
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/12/trunk/sofia-ml/src/sf-data-set_test.cc
+END
+sofia-ml.cc
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/31/trunk/sofia-ml/src/sofia-ml.cc
+END
+sofia-ml-methods_test.cc
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/12/trunk/sofia-ml/src/sofia-ml-methods_test.cc
+END
+sofia-ml-methods.cc
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/31/trunk/sofia-ml/src/sofia-ml-methods.cc
+END
+sf-data-set.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/13/trunk/sofia-ml/src/sf-data-set.cc
+END
+sf-data-set.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/13/trunk/sofia-ml/src/sf-data-set.h
+END
+sofia-ml-methods.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/31/trunk/sofia-ml/src/sofia-ml-methods.h
+END
+sf-hash-weight-vector.cc
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/15/trunk/sofia-ml/src/sf-hash-weight-vector.cc
+END
+sf-hash-weight-vector.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/10/trunk/sofia-ml/src/sf-hash-weight-vector.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/11/trunk/sofia-ml/src/Makefile
+END
+sf-data-set_test.dat
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/sofia-ml/src/sf-data-set_test.dat
+END
