@@ -42,6 +42,8 @@ void CommandLine(int argc, char** argv) {
   AddFlag("--results_file", "File to which to write predictions.", string(""));
   AddFlag("--model_in", "Read in a model from this file.", string(""));
   AddFlag("--model_out", "Write the model to this file.", string(""));
+  AddFlag("--test_stream", "Read input from standard in, write classifications to stdout.",
+          bool(false)),
   AddFlag("--random_seed",
 	  "When set to non-zero value, use this seed instead of seed from system clock.\n"
 	  "    This can be useful for parameter tuning in cross-validation, as setting \n"
@@ -382,5 +384,17 @@ int main (int argc, char** argv) {
     }
     prediction_stream.close();
     std::cerr << "   Done." << std::endl;
+  }
+
+  if (CMD_LINE_BOOLS["--test_stream"]) {
+    while (true) {
+      SfSparseVector test_instance = 
+        SfSparseVector::FromStream(std::cin, !CMD_LINE_BOOLS["--no_bias_term"]);
+      if (CMD_LINE_STRINGS["--prediction_type"] == "logistic") {
+        std::cout << sofia_ml::SingleLogisticPrediction(test_instance, *w) << "\n";
+      } else {
+        std::cout << sofia_ml::SingleSvmPrediction(test_instance, *w) << "\n";
+      }
+    }
   }
 }

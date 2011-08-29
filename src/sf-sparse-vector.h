@@ -45,6 +45,7 @@
 #include <float.h>
 #include <string>
 #include <vector>
+#include <fstream>
 
 #define SF_UNDEFINED_VAL FLT_MAX
 
@@ -68,6 +69,9 @@ class SfSparseVector {
   // Constructs a new vector from a string, as above, but also sets the bias
   // term to 1 iff use_bias_term is set to true.
   SfSparseVector(const char* in_string, bool use_bias_term);
+
+  // Constructs a new vector from a stream, as above.
+  static SfSparseVector FromStream(std::istream& stream, bool use_bias_term);
 
   // Construct a new vector that is the difference of two vectors, (a - b).
   // This is useful for ranking problems, etc.

@@ -50,6 +50,16 @@ SfSparseVector::SfSparseVector(const char* in_string,
   Init(in_string);
 }
 
+static string GetLineFromStream(std::istream& stream) {
+  string ret_line;
+  getline(stream, ret_line);
+  return ret_line;
+}
+
+SfSparseVector SfSparseVector::FromStream(std::istream& stream, bool use_bias_term) { 
+  return SfSparseVector(GetLineFromStream(stream).c_str(), use_bias_term);
+}
+
 SfSparseVector::SfSparseVector(const SfSparseVector& a,
 				 const SfSparseVector& b,
 				 float y) 
