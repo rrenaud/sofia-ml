@@ -21,7 +21,7 @@ GCC= g++ -O3 -lm -Wall
 #================================================================================#
 
 # Primary executable binary.
-sofia-ml:
+sofia-ml: sofia-ml.cc sofia-ml-methods.cc sf-weight-vector.cc sf-sparse-vector.cc sf-data-set.cc sf-hash-weight-vector.cc sf-hash-inline.cc
 	$(GCC) -o sofia-ml sofia-ml.cc sofia-ml-methods.cc sf-weight-vector.cc sf-sparse-vector.cc sf-data-set.cc sf-hash-weight-vector.cc sf-hash-inline.cc
 	cp sofia-ml ..
 

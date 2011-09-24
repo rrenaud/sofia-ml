@@ -1,18 +1,18 @@
-//================================================================================//
-// Copyright 2009 Google Inc.                                                     //
-//                                                                                // 
-// Licensed under the Apache License, Version 2.0 (the "License");                //
-// you may not use this file except in compliance with the License.               //
-// You may obtain a copy of the License at                                        //
-//                                                                                //
-//      http://www.apache.org/licenses/LICENSE-2.0                                //
-//                                                                                //
-// Unless required by applicable law or agreed to in writing, software            //
-// distributed under the License is distributed on an "AS IS" BASIS,              //
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.       //
-// See the License for the specific language governing permissions and            //
-// limitations under the License.                                                 //
-//================================================================================//
+//==========================================================================//
+// Copyright 2009 Google Inc.                                               //
+//                                                                          // 
+// Licensed under the Apache License, Version 2.0 (the "License");          //
+// you may not use this file except in compliance with the License.         //
+// You may obtain a copy of the License at                                  //
+//                                                                          //
+//      http://www.apache.org/licenses/LICENSE-2.0                          //
+//                                                                          //
+// Unless required by applicable law or agreed to in writing, software      //
+// distributed under the License is distributed on an "AS IS" BASIS,        //
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. //
+// See the License for the specific language governing permissions and      //
+// limitations under the License.                                           //
+//==========================================================================//
 //
 // sofia-ml.cc
 //
@@ -387,14 +387,14 @@ int main (int argc, char** argv) {
   }
 
   if (CMD_LINE_BOOLS["--test_stream"]) {
-    while (true) {
-      SfSparseVector test_instance = 
-        SfSparseVector::FromStream(std::cin, !CMD_LINE_BOOLS["--no_bias_term"]);
-      if (CMD_LINE_STRINGS["--prediction_type"] == "logistic") {
-        std::cout << sofia_ml::SingleLogisticPrediction(test_instance, *w) << "\n";
-      } else {
-        std::cout << sofia_ml::SingleSvmPrediction(test_instance, *w) << "\n";
-      }
+    int ct = 0;
+    std::cerr << "starting test stream\n";
+    string format_line;
+    while (getline(std::cin, format_line)) {
+      // std::cerr << "classifying instance " << ct++ << "\n";
+      SfSparseVector test_instance(format_line.c_str(), 
+                                   !CMD_LINE_BOOLS["--no_bias_term"]);
+      std::cout << sofia_ml::SingleSvmPrediction(test_instance, *w) << "\n";
     }
   }
 }
